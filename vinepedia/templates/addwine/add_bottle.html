@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<h3>Welcome to Vinepedia</h3>
+
+<h2>Add a wine!</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ formset }}
+    <button type="submit">Add Wine</button>
+</form>
+
+{% endblock content %}
